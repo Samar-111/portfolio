@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: var(--font-manrope), 'Manrope', sans-serif;
+  }
+
+  body {
+    background-color: #121212;
+    color: #fafafa;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #383838;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffdb70;
+}
+
+.vcard-card {
+  background: #1e1e1f;
+  border: 1px solid #383838;
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.vcard-item-bg {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%), #202021;
+  border: 1px solid #383838;
+}
+
+.text-gold {
+  color: #ffdb70;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(to right, #ffdb70, #ffc93e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(to right, #ffdb70, #ffc93e);
+}
+
+.article-title {
+  position: relative;
+  padding-bottom: 7px;
+}
+.article-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 5px;
+  background: linear-gradient(to right, #ffdb70, #ffc93e);
+  border-radius: 3px;
+}
+
+.vcard-icon-box {
+  background: linear-gradient(135deg, rgba(255, 219, 112, 0.15) 0%, rgba(255, 201, 62, 0) 100%), #202021;
+  border: 1px solid #383838;
+  box-shadow: -4px 8px 24px rgba(0, 0, 0, 0.125);
+}
+
+.timeline-dot {
+  background: #ffdb70;
+  box-shadow: 0 0 0 4px rgba(255, 219, 112, 0.25);
+}
