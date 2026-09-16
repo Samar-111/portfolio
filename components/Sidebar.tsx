@@ -15,6 +15,7 @@ import {
   ChevronUp,
   Check,
   Copy,
+  Sparkles,
 } from 'lucide-react';
 
 export default function Sidebar() {
@@ -38,11 +39,12 @@ export default function Sidebar() {
     <aside className="vcard-card p-6 sm:p-8 relative shadow-2xl transition-all duration-300">
       <div className="flex flex-row lg:flex-col items-center lg:items-center gap-5 text-left lg:text-center">
         <div className="relative shrink-0 group">
-          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-[#2b2b2c] border border-[#383838] p-2 flex items-center justify-center shadow-lg overflow-hidden">
+          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-[#222226] border border-[#2e2e32] p-2 flex items-center justify-center shadow-lg overflow-hidden relative group-hover:border-[#ffdb70]/60 transition-colors duration-300">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#ffdb70]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <img
               src="/avatar.jpg"
               alt="Samar Anand"
-              className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 relative z-10"
             />
           </div>
         </div>
@@ -52,13 +54,18 @@ export default function Sidebar() {
             Samar Anand
           </h1>
 
-          <div className="inline-block px-3.5 py-1.5 rounded-xl bg-[#2b2b2c] border border-[#383838] text-[#ffdb70] text-xs font-medium mb-3">
+          <div className="inline-block px-3.5 py-1.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-[#ffdb70] text-xs font-semibold mb-2 shadow-inner">
             AI & Full Stack Engineer
+          </div>
+
+          <div className="flex items-center justify-center gap-2 px-3 py-1 rounded-full hud-pill text-[10px] font-mono text-[#ffdb70] mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>SYS // AVAILABLE FOR ROLES</span>
           </div>
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="lg:hidden mt-2 px-3 py-1.5 rounded-xl bg-[#2b2b2c] border border-[#383838] text-xs text-[#ffdb70] flex items-center gap-1.5"
+            className="lg:hidden mt-2 px-3 py-1.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-xs text-[#ffdb70] flex items-center gap-1.5"
           >
             <span>{isExpanded ? 'Hide Contacts' : 'Show Contacts'}</span>
             {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -66,21 +73,21 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div className={`space-y-5 pt-6 mt-6 border-t border-[#383838] ${isExpanded ? 'block' : 'hidden lg:block'}`}>
+      <div className={`space-y-5 pt-6 mt-6 border-t border-[#2e2e32] ${isExpanded ? 'block' : 'hidden lg:block'}`}>
         <div className="space-y-4 text-xs font-sans">
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3 overflow-hidden">
-              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0">
+              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
                 <Mail className="w-4 h-4" />
               </div>
               <div className="truncate">
-                <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold">EMAIL</p>
+                <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold font-mono">EMAIL</p>
                 <p className="text-white font-medium truncate">samaranand9798@gmail.com</p>
               </div>
             </div>
             <button
               onClick={() => handleCopy('email')}
-              className="p-1.5 text-[#9f9f9f] hover:text-[#ffdb70] shrink-0"
+              className="p-1.5 text-[#9f9f9f] hover:text-[#ffdb70] transition-colors shrink-0"
               title="Copy Email"
             >
               {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
@@ -89,46 +96,46 @@ export default function Sidebar() {
 
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3 overflow-hidden">
-              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0">
+              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
                 <Phone className="w-4 h-4" />
               </div>
               <div className="truncate">
-                <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold">PHONE</p>
+                <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold font-mono">PHONE</p>
                 <p className="text-white font-medium truncate">+91-9798169650</p>
               </div>
             </div>
             <button
               onClick={() => handleCopy('phone')}
-              className="p-1.5 text-[#9f9f9f] hover:text-[#ffdb70] shrink-0"
+              className="p-1.5 text-[#9f9f9f] hover:text-[#ffdb70] transition-colors shrink-0"
               title="Copy Phone"
             >
               {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
             </button>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0">
+          <div className="flex items-center gap-3 group">
+            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
               <GraduationCap className="w-4 h-4" />
             </div>
             <div className="truncate">
-              <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold">EDUCATION</p>
+              <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold font-mono">EDUCATION</p>
               <p className="text-white font-medium truncate">VIT Bhopal University (8.63)</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0">
+          <div className="flex items-center gap-3 group">
+            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
               <MapPin className="w-4 h-4" />
             </div>
             <div className="truncate">
-              <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold">LOCATION</p>
+              <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold font-mono">LOCATION</p>
               <p className="text-white font-medium truncate">Madhya Pradesh, India</p>
             </div>
           </div>
         </div>
 
-        <div className="pt-5 border-t border-[#383838]">
-          <p className="text-[10px] text-[#9f9f9f] uppercase tracking-widest mb-3 text-center font-semibold">
+        <div className="pt-5 border-t border-[#2e2e32]">
+          <p className="text-[10px] text-[#9f9f9f] uppercase tracking-widest mb-3 text-center font-semibold font-mono">
             Social Profiles
           </p>
           <div className="flex items-center justify-center gap-3">
@@ -136,7 +143,7 @@ export default function Sidebar() {
               href="https://github.com/Samar-111"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#2b2b2c] border border-[#383838] text-[#d6d6d6] hover:text-[#ffdb70] transition-colors"
+              className="p-2.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-[#d6d6d6] hover:text-[#ffdb70] hover:border-[#ffdb70]/50 hover:shadow-[0_0_15px_rgba(255,219,112,0.25)] transition-all"
               title="GitHub"
             >
               <Github className="w-4 h-4" />
@@ -145,7 +152,7 @@ export default function Sidebar() {
               href="https://www.linkedin.com/in/samar-anand-a87642287/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#2b2b2c] border border-[#383838] text-[#d6d6d6] hover:text-[#ffdb70] transition-colors"
+              className="p-2.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-[#d6d6d6] hover:text-[#ffdb70] hover:border-[#ffdb70]/50 hover:shadow-[0_0_15px_rgba(255,219,112,0.25)] transition-all"
               title="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
@@ -154,7 +161,7 @@ export default function Sidebar() {
               href="https://leetcode.com/u/Sam9798/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#2b2b2c] border border-[#383838] text-[#d6d6d6] hover:text-[#ffdb70] transition-colors"
+              className="p-2.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-[#d6d6d6] hover:text-[#ffdb70] hover:border-[#ffdb70]/50 hover:shadow-[0_0_15px_rgba(255,219,112,0.25)] transition-all"
               title="LeetCode"
             >
               <Code2 className="w-4 h-4" />
@@ -163,7 +170,7 @@ export default function Sidebar() {
               href="https://codeforces.com/profile/Samar__009"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#2b2b2c] border border-[#383838] text-[#d6d6d6] hover:text-[#ffdb70] transition-colors"
+              className="p-2.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-[#d6d6d6] hover:text-[#ffdb70] hover:border-[#ffdb70]/50 hover:shadow-[0_0_15px_rgba(255,219,112,0.25)] transition-all"
               title="Codeforces"
             >
               <Trophy className="w-4 h-4" />
@@ -177,10 +184,11 @@ export default function Sidebar() {
             download="Samar_Anand_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-3 rounded-2xl font-bold text-xs text-[#121212] bg-[#ffdb70] hover:bg-[#ffc93e] transition-colors flex items-center justify-center gap-2 shadow-lg"
+            className="futuristic-btn w-full py-3 rounded-2xl flex items-center justify-center gap-2 shadow-lg text-xs"
           >
             <Download className="w-4 h-4" />
             <span>Download Resume</span>
+            <Sparkles className="w-3.5 h-3.5 opacity-70" />
           </a>
         </div>
       </div>

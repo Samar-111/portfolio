@@ -33,15 +33,15 @@ export default function BackgroundCanvas() {
       color: string;
     }[] = [];
 
-    const numParticles = Math.min(Math.floor(width / 18), 75);
-    const colors = ['#00f0ff', '#a855f7', '#10b981', '#3b82f6'];
+    const numParticles = Math.min(Math.floor(width / 22), 65);
+    const colors = ['#ffdb70', '#ffc93e', '#ffeaa7', '#f59e0b', '#fbbf24'];
 
     for (let i = 0; i < numParticles; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.6,
-        vy: (Math.random() - 0.5) * 0.6,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
         color: colors[Math.floor(Math.random() * colors.length)],
       });
@@ -71,7 +71,7 @@ export default function BackgroundCanvas() {
         ctx.beginPath();
         ctx.arc(p1.x, p1.y, p1.size, 0, Math.PI * 2);
         ctx.fillStyle = p1.color;
-        ctx.shadowBlur = 8;
+        ctx.shadowBlur = 10;
         ctx.shadowColor = p1.color;
         ctx.fill();
 
@@ -81,12 +81,12 @@ export default function BackgroundCanvas() {
           const dy = p1.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 120) {
+          if (dist < 110) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
             ctx.strokeStyle = p1.color;
-            ctx.globalAlpha = (1 - dist / 120) * 0.18;
+            ctx.globalAlpha = (1 - dist / 110) * 0.16;
             ctx.stroke();
             ctx.globalAlpha = 1.0;
           }
@@ -95,12 +95,12 @@ export default function BackgroundCanvas() {
         const mdx = mouse.x - p1.x;
         const mdy = mouse.y - p1.y;
         const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
-        if (mdist < 150) {
+        if (mdist < 140) {
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = '#00f0ff';
-          ctx.globalAlpha = (1 - mdist / 150) * 0.3;
+          ctx.strokeStyle = '#ffdb70';
+          ctx.globalAlpha = (1 - mdist / 140) * 0.25;
           ctx.stroke();
           ctx.globalAlpha = 1.0;
         }
@@ -121,7 +121,7 @@ export default function BackgroundCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-60"
+      className="fixed inset-0 pointer-events-none z-0 opacity-40"
     />
   );
 }
