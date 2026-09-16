@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Activity, Layers, Brain, Code2, Trophy, Award, GraduationCap, Play, Copy, Check, Zap } from 'lucide-react';
+import { Terminal, Activity, Brain, Code2, Trophy, Award, GraduationCap, Zap, Sparkles, Server, Network } from 'lucide-react';
 
 const services = [
   {
@@ -24,6 +24,37 @@ const services = [
     title: 'Agentic Workflows & Microservices',
     description: 'Specializing in ServiceNow Agentic AI workflows, LangChain, RAG architectures, distributed MongoDB Atlas caching, and scalable cloud deployments.',
     icon: Brain,
+  },
+];
+
+const nodes = [
+  {
+    id: 'medqueue',
+    title: 'MedQueue AI',
+    tag: 'Clinical Triage • ESI 1-5',
+    icon: Activity,
+    color: 'from-rose-500/20 to-amber-500/20 border-rose-500/40 text-rose-400',
+  },
+  {
+    id: 'vibecode',
+    title: 'VibeCode',
+    tag: 'WebContainers • Sub-Second',
+    icon: Terminal,
+    color: 'from-cyan-500/20 to-blue-500/20 border-cyan-500/40 text-cyan-400',
+  },
+  {
+    id: 'nexus',
+    title: 'Nexus Cart',
+    tag: 'Voice Assistant • <250ms',
+    icon: Zap,
+    color: 'from-purple-500/20 to-pink-500/20 border-purple-500/40 text-purple-400',
+  },
+  {
+    id: 'agentic',
+    title: 'Agentic AI & RAG',
+    tag: 'LangChain • Microservices',
+    icon: Brain,
+    color: 'from-emerald-500/20 to-teal-500/20 border-emerald-500/40 text-emerald-400',
   },
 ];
 
@@ -58,37 +89,8 @@ const cpStats = [
   },
 ];
 
-const terminalLogs = [
-  'samar@quantum-core:~$ sys-init --target medqueue-ai --ai gemini-2.5-flash',
-  '[*] Spawning WebContainer Sandbox Runtime... OK [0.18s]',
-  '[*] Initializing Socket.io Bi-Directional WebSocket Bridge... CONNECTED [port: 3000]',
-  '[*] Loading Clinical Triage Parser (Zod Schema Validation)... READY',
-  '[*] ACID Transaction Lock Enabled: High-risk ESI 1-2 Emergency Jump Logic ACTIVE',
-  '[✓] STATUS 200: VibeCode IDE & MedQueue AI Triage Engines LIVE and Operational.',
-];
-
 export default function AboutSection() {
-  const [copiedLog, setCopiedLog] = useState(false);
-  const [isRunning, setIsRunning] = useState(false);
-  const [activeLogs, setActiveLogs] = useState(terminalLogs);
-
-  const handleRun = () => {
-    setIsRunning(true);
-    setActiveLogs([
-      'samar@quantum-core:~$ executing live system health diagnostics...',
-      '[*] Testing VibeCode WebContainers inline execution... OK',
-      '[*] Verifying MedQueue AI live WebSocket telemetry across 3 dashboards... OK',
-      '[*] Evaluating Nexus Cart NLP accuracy score... 94% CONFIRMED',
-      '[✓] SYSTEM HEALTH 100% — All distributed microservices operational.',
-    ]);
-    setTimeout(() => setIsRunning(false), 800);
-  };
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(activeLogs.join('\n'));
-    setCopiedLog(true);
-    setTimeout(() => setCopiedLog(false), 2000);
-  };
+  const [activeNode, setActiveNode] = useState(0);
 
   return (
     <div className="space-y-10">
@@ -97,10 +99,11 @@ export default function AboutSection() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight article-title">
             About Me
           </h2>
-          <span className="text-[10px] font-mono text-[#ffdb70] hud-pill px-3 py-1 rounded-full flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            ONLINE // VIT BHOPAL (AI & ML)
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />
+            <span className="w-1 h-1 rounded-full bg-emerald-400/30" />
+          </div>
         </div>
 
         <div className="space-y-4 text-[#d6d6d6] text-sm leading-relaxed font-sans">
@@ -108,7 +111,7 @@ export default function AboutSection() {
             I am a Computer Science undergraduate at <strong className="text-white">VIT Bhopal University</strong> (CGPA: 8.63 / 10.00) specializing in <span className="text-[#ffdb70] font-semibold">Artificial Intelligence & Machine Learning</span>.
           </p>
           <p>
-            My engineering expertise centers on architecting mission-critical, real-time distributed platforms: from emergency healthcare intake engines (<strong className="text-white">MedQueue AI</strong> with ESI 1–5 triage, ACID transaction locks & WebSocket synchronization) to browser-native developer environments (<strong className="text-white">VibeCode</strong> with WebContainers sandbox compilation) and voice-driven assistant systems (<strong className="text-white">Nexus Cart</strong>).
+            My engineering focus centers on architecting real-time distributed platforms: from emergency healthcare intake engines (<strong className="text-white">MedQueue AI</strong> with ESI 1–5 triage, ACID transaction locks & WebSocket synchronization) to browser-native developer environments (<strong className="text-white">VibeCode</strong> with WebContainers sandbox compilation) and voice-driven assistant systems (<strong className="text-white">Nexus Cart</strong>).
           </p>
           <p>
             I was selected into the prestigious <strong className="text-white">AlgoUniversity Programming Camp</strong> from among 60,000+ applicants and inducted into their Hall of Fame.
@@ -116,53 +119,51 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <div className="vcard-item-bg rounded-2xl p-4 sm:p-5 border border-[#2e2e32] shadow-xl">
-        <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#2e2e32]">
+      <div className="vcard-item-bg rounded-2xl p-5 border border-[#2e2e32] shadow-xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-[#ffdb70]/5 rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#2e2e32]">
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-            </div>
-            <span className="text-[11px] font-mono text-[#9f9f9f] ml-2 flex items-center gap-1">
-              <Terminal className="w-3 h-3 text-[#ffdb70]" />
-              samar-telemetry-sandbox // live
+            <Network className="w-4 h-4 text-[#ffdb70]" />
+            <span className="text-xs font-mono font-semibold text-white tracking-wide">
+              Engineering Focus & Architecture Mesh
             </span>
           </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              onClick={handleRun}
-              className="px-2.5 py-1 rounded-lg bg-[#222226] border border-[#2e2e32] text-[#ffdb70] text-[10px] font-mono hover:border-[#ffdb70]/60 hover:text-white flex items-center gap-1 transition-colors"
-            >
-              <Play className="w-3 h-3 text-emerald-400" />
-              <span>{isRunning ? 'Running...' : 'Run Diagnostics'}</span>
-            </button>
-            <button
-              onClick={handleCopy}
-              className="p-1 rounded-lg bg-[#222226] border border-[#2e2e32] text-[#9f9f9f] hover:text-[#ffdb70] transition-colors"
-              title="Copy Output"
-            >
-              {copiedLog ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
-            </button>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#ffdb70] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-emerald-400" />
           </div>
         </div>
 
-        <div className="font-mono text-xs text-[#d6d6d6] space-y-1 bg-[#101114] p-3.5 rounded-xl border border-[#2e2e32]/60 overflow-x-auto">
-          {activeLogs.map((line, idx) => (
-            <div
-              key={idx}
-              className={`${
-                line.startsWith('[✓]')
-                  ? 'text-emerald-400 font-semibold'
-                  : line.startsWith('samar@')
-                  ? 'text-[#ffdb70] font-semibold'
-                  : 'text-[#a0a0a5]'
-              }`}
-            >
-              {line}
-            </div>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {nodes.map((node, idx) => {
+            const Icon = node.icon;
+            const isSelected = activeNode === idx;
+            return (
+              <motion.div
+                key={node.id}
+                onClick={() => setActiveNode(idx)}
+                whileHover={{ y: -3, scale: 1.02 }}
+                className={`p-4 rounded-xl border transition-all cursor-pointer relative overflow-hidden ${
+                  isSelected
+                    ? 'bg-[#222226] border-[#ffdb70] shadow-[0_0_20px_rgba(255,219,112,0.15)]'
+                    : 'bg-[#18181b]/80 border-[#2e2e32] hover:border-[#ffdb70]/50'
+                }`}
+              >
+                {isSelected && (
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffdb70] to-transparent" />
+                )}
+                <div className="flex items-center justify-between mb-2">
+                  <div className={`p-2 rounded-lg bg-gradient-to-br ${node.color} border`}>
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-[#ffdb70] shadow-[0_0_6px_#ffdb70]' : 'bg-gray-600'}`} />
+                </div>
+                <h4 className="text-xs font-bold text-white mb-0.5">{node.title}</h4>
+                <p className="text-[10px] font-mono text-[#9f9f9f]">{node.tag}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 

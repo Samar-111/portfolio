@@ -177,14 +177,15 @@ export default function PortfolioSection() {
   return (
     <div className="space-y-8">
       <div>
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6">
+        <div className="flex items-center justify-between gap-2 mb-6">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight article-title">
             Projects
           </h2>
-          <span className="text-[11px] font-mono text-[#9f9f9f] hud-pill px-3 py-1 rounded-full w-fit flex items-center gap-1.5">
-            <Activity className="w-3 h-3 text-[#ffdb70]" />
-            5 PRODUCTION SYSTEMS DEPLOYED
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />
+            <span className="w-1 h-1 rounded-full bg-emerald-400/30" />
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2.5 mb-8 font-sans text-xs">

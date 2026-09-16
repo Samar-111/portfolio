@@ -97,10 +97,11 @@ export default function ResumeSection() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight article-title">
             Resume
           </h2>
-          <span className="text-[10px] font-mono text-[#ffdb70] hud-pill px-3 py-1 rounded-full flex items-center gap-1.5">
-            <Cpu className="w-3 h-3 text-[#ffdb70]" />
-            EXPERIENCE & CORE ARCHITECTURE
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />
+            <span className="w-1 h-1 rounded-full bg-emerald-400/30" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -173,9 +174,9 @@ export default function ResumeSection() {
       <div>
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-xl font-bold text-white">Technical Proficiency Matrix</h3>
-          <span className="text-[10px] font-mono text-[#9f9f9f] hud-pill px-2.5 py-0.5 rounded-full">
-            REAL-TIME & AGENTIC AI
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#ffdb70] shadow-[0_0_6px_#ffdb70]" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

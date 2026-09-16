@@ -39,13 +39,17 @@ export default function Sidebar() {
     <aside className="vcard-card p-6 sm:p-8 relative shadow-2xl transition-all duration-300">
       <div className="flex flex-row lg:flex-col items-center lg:items-center gap-5 text-left lg:text-center">
         <div className="relative shrink-0 group">
-          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-[#222226] border border-[#2e2e32] p-2 flex items-center justify-center shadow-lg overflow-hidden relative group-hover:border-[#ffdb70]/60 transition-colors duration-300">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#ffdb70]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <img
-              src="/avatar.jpg"
-              alt="Samar Anand"
-              className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 relative z-10"
-            />
+          <div className="relative">
+            <div className="absolute -inset-1 rounded-[28px] bg-gradient-to-r from-[#ffdb70]/30 via-[#ffc93e]/10 to-[#ffdb70]/30 opacity-75 blur-sm group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-[#222226] border border-[#2e2e32] p-2 flex items-center justify-center shadow-lg overflow-hidden relative group-hover:border-[#ffdb70]/70 transition-colors duration-300">
+              <img
+                src="/avatar.jpg"
+                alt="Samar Anand"
+                className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 relative z-10"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none" />
+            </div>
+            <span className="absolute bottom-2 right-2 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#18181b] z-30 shadow-[0_0_10px_#34d399]" />
           </div>
         </div>
 
@@ -54,20 +58,15 @@ export default function Sidebar() {
             Samar Anand
           </h1>
 
-          <div className="inline-block px-3.5 py-1.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-[#ffdb70] text-xs font-semibold mb-2 shadow-inner">
+          <div className="inline-block px-4 py-1.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-[#ffdb70] text-xs font-semibold mb-1 shadow-inner">
             AI & Full Stack Engineer
-          </div>
-
-          <div className="flex items-center justify-center gap-2 px-3 py-1 rounded-full hud-pill text-[10px] font-mono text-[#ffdb70] mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>SYS // AVAILABLE FOR ROLES</span>
           </div>
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="lg:hidden mt-2 px-3 py-1.5 rounded-xl bg-[#222226] border border-[#2e2e32] text-xs text-[#ffdb70] flex items-center gap-1.5"
           >
-            <span>{isExpanded ? 'Hide Contacts' : 'Show Contacts'}</span>
+            <span>{isExpanded ? 'Hide Details' : 'Show Details'}</span>
             {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
           </button>
         </div>
@@ -77,7 +76,7 @@ export default function Sidebar() {
         <div className="space-y-4 text-xs font-sans">
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3 overflow-hidden">
-              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
+              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-110 transition-transform">
                 <Mail className="w-4 h-4" />
               </div>
               <div className="truncate">
@@ -96,7 +95,7 @@ export default function Sidebar() {
 
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3 overflow-hidden">
-              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
+              <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-110 transition-transform">
                 <Phone className="w-4 h-4" />
               </div>
               <div className="truncate">
@@ -114,7 +113,7 @@ export default function Sidebar() {
           </div>
 
           <div className="flex items-center gap-3 group">
-            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
+            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-110 transition-transform">
               <GraduationCap className="w-4 h-4" />
             </div>
             <div className="truncate">
@@ -124,7 +123,7 @@ export default function Sidebar() {
           </div>
 
           <div className="flex items-center gap-3 group">
-            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-105 transition-transform">
+            <div className="vcard-icon-box p-2.5 rounded-xl text-[#ffdb70] shrink-0 group-hover:scale-110 transition-transform">
               <MapPin className="w-4 h-4" />
             </div>
             <div className="truncate">
@@ -135,9 +134,6 @@ export default function Sidebar() {
         </div>
 
         <div className="pt-5 border-t border-[#2e2e32]">
-          <p className="text-[10px] text-[#9f9f9f] uppercase tracking-widest mb-3 text-center font-semibold font-mono">
-            Social Profiles
-          </p>
           <div className="flex items-center justify-center gap-3">
             <a
               href="https://github.com/Samar-111"

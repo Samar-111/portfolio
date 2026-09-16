@@ -39,10 +39,11 @@ export default function ContactSection() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight article-title">
             Contact
           </h2>
-          <span className="text-[10px] font-mono text-[#ffdb70] hud-pill px-3 py-1 rounded-full flex items-center gap-1.5">
-            <Radio className="w-3 h-3 text-[#ffdb70] animate-pulse" />
-            DIRECT SECURE CHANNELS
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />
+            <span className="w-1 h-1 rounded-full bg-emerald-400/30" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -153,7 +154,7 @@ export default function ContactSection() {
                     className="futuristic-btn w-full py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-lg text-xs"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    <span>Send Message Transmission</span>
+                    <span>Send Message</span>
                   </button>
                 </form>
               )}

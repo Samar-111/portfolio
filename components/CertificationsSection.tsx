@@ -56,10 +56,11 @@ export default function CertificationsSection() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight article-title">
             Certifications & Leadership
           </h2>
-          <span className="text-[10px] font-mono text-[#ffdb70] hud-pill px-3 py-1 rounded-full flex items-center gap-1.5">
-            <Sparkles className="w-3 h-3 text-[#ffdb70]" />
-            CREDENTIALS & MERIT
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />
+            <span className="w-1 h-1 rounded-full bg-emerald-400/30" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -94,7 +95,6 @@ export default function CertificationsSection() {
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   Verified Credential
                 </span>
-                <span className="text-[#ffdb70]">VALID</span>
               </div>
             </motion.div>
           ))}

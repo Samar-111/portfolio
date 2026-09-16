@@ -23,10 +23,10 @@ export default function MainContent() {
 
   return (
     <article className="vcard-card p-6 sm:p-10 relative shadow-2xl overflow-hidden min-h-[640px]">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 pb-4 border-b border-[#2e2e32]">
-        <div className="flex items-center gap-2 text-xs font-mono text-[#9f9f9f]">
-          <span className="w-2 h-2 rounded-full bg-[#ffdb70] animate-pulse" />
-          <span className="uppercase tracking-widest text-[#ffdb70]">SYS_CORE // 2026.v2</span>
+      <div className="flex items-center justify-between gap-4 mb-8 pb-4 border-b border-[#2e2e32]">
+        <div className="flex items-center gap-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399] animate-pulse" />
+          <div className="h-0.5 w-12 bg-gradient-to-r from-emerald-400/80 via-[#ffdb70]/50 to-transparent rounded-full" />
         </div>
 
         <nav className="inline-flex items-center gap-1.5 p-1.5 rounded-2xl bg-[#222226] border border-[#2e2e32] font-sans text-xs sm:text-sm font-semibold shadow-lg overflow-x-auto">
