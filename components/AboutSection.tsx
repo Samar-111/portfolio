@@ -64,14 +64,14 @@ const cpStats = [
     handle: 'Sam9798',
     url: 'https://leetcode.com/u/Sam9798/',
     icon: Code2,
-    badge: 'DSA & Algorithms',
+    badge: '300+ Problems Solved',
   },
   {
     title: 'Codeforces',
     handle: 'Samar__009',
     url: 'https://codeforces.com/profile/Samar__009',
     icon: Trophy,
-    badge: 'Competitive Coder',
+    badge: 'Specialist (Max: 1421)',
   },
   {
     title: 'AlgoUniversity',
@@ -82,7 +82,7 @@ const cpStats = [
   },
   {
     title: 'VIT Bhopal CGPA',
-    handle: '8.63 / 10.00',
+    handle: '8.69 / 10.00',
     url: '#resume',
     icon: GraduationCap,
     badge: 'B.Tech CS (AI & ML)',
@@ -108,7 +108,7 @@ export default function AboutSection() {
 
         <div className="space-y-4 text-[#d6d6d6] text-sm leading-relaxed font-sans">
           <p>
-            I am a Computer Science undergraduate at <strong className="text-white">VIT Bhopal University</strong> (CGPA: 8.63 / 10.00) specializing in <span className="text-[#ffdb70] font-semibold">Artificial Intelligence & Machine Learning</span>.
+            I am a Computer Science undergraduate at <strong className="text-white">VIT Bhopal University</strong> (CGPA: 8.69 / 10.00) specializing in <span className="text-[#ffdb70] font-semibold">Artificial Intelligence & Machine Learning</span>.
           </p>
           <p>
             My engineering focus centers on architecting real-time distributed platforms and autonomous systems: from multi-agent coordination engines (<strong className="text-white">CartPilot AI</strong> with LangGraph.js & real-time SSE streaming) and emergency healthcare intake engines (<strong className="text-white">MedQueue AI</strong> with ESI 1–5 triage, ACID transaction locks & WebSocket synchronization) to browser-native developer environments (<strong className="text-white">VibeCode</strong> with WebContainers sandbox compilation) and voice-driven assistant systems (<strong className="text-white">Nexus Cart</strong>).

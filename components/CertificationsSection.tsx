@@ -19,6 +19,13 @@ const achievements = [
     type: 'leadership',
   },
   {
+    title: 'Hackathons & Competitive Programming',
+    issuer: 'Adobe Hackathon & Codeforces',
+    detail: 'Participated in 5+ Hackathons including 2× Adobe Hackathon. Codeforces Specialist (Max Rating: 1421) with 300+ solved problems.',
+    badge: 'Specialist & Competitor',
+    type: 'honors',
+  },
+  {
     title: 'Microsoft Azure Fundamentals DP-900',
     issuer: 'Microsoft',
     detail: 'Cloud architecture, security postures, Azure governance, and scalable workload deployment.',

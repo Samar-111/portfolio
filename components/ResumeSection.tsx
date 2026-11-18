@@ -11,10 +11,10 @@ const experiences = [
     location: 'Remote',
     period: 'May 2025 – Jul 2025',
     highlights: [
-      'Developed RESTful backend services for core platform modules.',
-      'Optimized MongoDB schemas and queries, improving data retrieval speed and database efficiency.',
-      'Developed responsive React interfaces across key application pages, enhancing user experience and rendering performance.',
-      'Implemented authentication and role-based access control (RBAC) to secure application endpoints and user roles.',
+      'Delivered RESTful backend services for core platform modules.',
+      'Optimized MongoDB schemas and queries, improving query performance by 25% and enhancing database efficiency.',
+      'Crafted 12+ responsive React interfaces across key application pages, enhancing user experience and rendering performance.',
+      'Secured application endpoints through authentication and role-based access control (RBAC), managing user roles and permissions.',
     ],
   },
   {
@@ -24,9 +24,9 @@ const experiences = [
     location: 'Remote',
     period: 'May 2026 – Jun 2026',
     highlights: [
-      'Worked with ServiceNow administration concepts including user management, platform configuration, workflow automation, reporting, and dashboard creation.',
+      'Applied ServiceNow administration concepts including user management, platform configuration, workflow automation, reporting, and dashboard creation.',
       'Explored Agentic AI capabilities and automated workflow development within the ServiceNow platform.',
-      'Tested custom application logic using ServiceNow Automated Test Framework (ATF) configurations.',
+      'Validated custom application logic using ServiceNow Automated Test Framework (ATF) configurations.',
     ],
   },
   {
@@ -36,7 +36,7 @@ const experiences = [
     location: 'Bhopal, Madhya Pradesh',
     period: 'Aug 2023 – Aug 2027',
     highlights: [
-      'Cumulative Grade Point Average (CGPA): 8.63 / 10.00.',
+      'Cumulative Grade Point Average (CGPA): 8.69 / 10.00.',
       'Advanced specialized focus in Natural Language Processing, Deep Learning, Distributed Systems, Data Structures & Algorithms, and DBMS.',
     ],
   },

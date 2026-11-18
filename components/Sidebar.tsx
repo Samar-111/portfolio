@@ -118,7 +118,7 @@ export default function Sidebar() {
             </div>
             <div className="truncate">
               <p className="text-[10px] text-[#9f9f9f] uppercase tracking-wider font-semibold font-mono">EDUCATION</p>
-              <p className="text-white font-medium truncate">VIT Bhopal University (8.63)</p>
+              <p className="text-white font-medium truncate">VIT Bhopal University (8.69)</p>
             </div>
           </div>
 

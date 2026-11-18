@@ -1,7 +1,7 @@
 # 🌟 Samar Anand - Personal Developer Portfolio
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Manrope&weight=700&size=32&pause=1000&color=FFDB70&center=true&vCenter=true&width=800&lines=Samar+Anand;AI+%26+Full+Stack+Engineer;Creator+of+CartPilot+AI+%26+MedQueue+AI;VIT+Bhopal+(CGPA%3A+8.63)" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Manrope&weight=700&size=32&pause=1000&color=FFDB70&center=true&vCenter=true&width=800&lines=Samar+Anand;AI+%26+Full+Stack+Engineer;Creator+of+CartPilot+AI+%26+MedQueue+AI;VIT+Bhopal+(CGPA%3A+8.69)" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@
 
 ## ✨ Overview
 
-A high-performance **vCard Split Sidebar & Tabbed Navigation** personal developer portfolio built for **Samar Anand** (B.Tech Computer Science student specializing in AI & Machine Learning at **VIT Bhopal University**, CGPA: **8.63 / 10.00**).
+A high-performance **vCard Split Sidebar & Tabbed Navigation** personal developer portfolio built for **Samar Anand** (B.Tech Computer Science student specializing in AI & Machine Learning at **VIT Bhopal University**, CGPA: **8.69 / 10.00**).
 
 Engineered with dark onyx glassmorphism aesthetics, warm gold accents (`#ffdb70`), futuristic glowing buffer animations, interactive telemetry sandboxes, filterable project showcases, and career timelines.
 
