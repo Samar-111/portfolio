@@ -6,6 +6,11 @@ import { Terminal, Activity, Brain, Code2, Trophy, Award, GraduationCap, Zap, Sp
 
 const services = [
   {
+    title: 'Autonomous Multi-Agent Workflows',
+    description: 'Engineering multi-agent orchestrations (CartPilot AI) using LangGraph.js, StateGraph branching, human-in-the-loop checkpoints & deterministic budget engines.',
+    icon: Brain,
+  },
+  {
     title: 'Clinical Triage & Real-Time AI',
     description: 'Architecting high-concurrency healthcare triage platforms (MedQueue AI) using WebSockets, ESI 1–5 classification, Zod parsing & ACID transaction re-ordering.',
     icon: Activity,
@@ -20,14 +25,16 @@ const services = [
     description: 'Pioneering speech-to-text assistants (Nexus Cart) with <250ms latency using Web Speech API, Gemini NLP command parsing and automated inventory sync.',
     icon: Zap,
   },
-  {
-    title: 'Agentic Workflows & Microservices',
-    description: 'Specializing in ServiceNow Agentic AI workflows, LangChain, RAG architectures, distributed MongoDB Atlas caching, and scalable cloud deployments.',
-    icon: Brain,
-  },
 ];
 
 const nodes = [
+  {
+    id: 'cartpilot',
+    title: 'CartPilot AI',
+    tag: '5-Agent Workforce • LangGraph',
+    icon: Brain,
+    color: 'from-amber-500/20 to-emerald-500/20 border-amber-500/40 text-amber-400',
+  },
   {
     id: 'medqueue',
     title: 'MedQueue AI',
@@ -48,13 +55,6 @@ const nodes = [
     tag: 'Voice Assistant • <250ms',
     icon: Zap,
     color: 'from-purple-500/20 to-pink-500/20 border-purple-500/40 text-purple-400',
-  },
-  {
-    id: 'agentic',
-    title: 'Agentic AI & RAG',
-    tag: 'LangChain • Microservices',
-    icon: Brain,
-    color: 'from-emerald-500/20 to-teal-500/20 border-emerald-500/40 text-emerald-400',
   },
 ];
 
@@ -111,7 +111,7 @@ export default function AboutSection() {
             I am a Computer Science undergraduate at <strong className="text-white">VIT Bhopal University</strong> (CGPA: 8.63 / 10.00) specializing in <span className="text-[#ffdb70] font-semibold">Artificial Intelligence & Machine Learning</span>.
           </p>
           <p>
-            My engineering focus centers on architecting real-time distributed platforms: from emergency healthcare intake engines (<strong className="text-white">MedQueue AI</strong> with ESI 1–5 triage, ACID transaction locks & WebSocket synchronization) to browser-native developer environments (<strong className="text-white">VibeCode</strong> with WebContainers sandbox compilation) and voice-driven assistant systems (<strong className="text-white">Nexus Cart</strong>).
+            My engineering focus centers on architecting real-time distributed platforms and autonomous systems: from multi-agent coordination engines (<strong className="text-white">CartPilot AI</strong> with LangGraph.js & real-time SSE streaming) and emergency healthcare intake engines (<strong className="text-white">MedQueue AI</strong> with ESI 1–5 triage, ACID transaction locks & WebSocket synchronization) to browser-native developer environments (<strong className="text-white">VibeCode</strong> with WebContainers sandbox compilation) and voice-driven assistant systems (<strong className="text-white">Nexus Cart</strong>).
           </p>
           <p>
             I was selected into the prestigious <strong className="text-white">AlgoUniversity Programming Camp</strong> from among 60,000+ applicants and inducted into their Hall of Fame.

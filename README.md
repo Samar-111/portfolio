@@ -1,7 +1,7 @@
 # 🌟 Samar Anand - Personal Developer Portfolio
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Manrope&weight=700&size=32&pause=1000&color=FFDB70&center=true&vCenter=true&width=800&lines=Samar+Anand;AI+%26+Full+Stack+Engineer;Creator+of+MedQueue+AI+%26+VibeCode;VIT+Bhopal+(CGPA%3A+8.63)" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Manrope&weight=700&size=32&pause=1000&color=FFDB70&center=true&vCenter=true&width=800&lines=Samar+Anand;AI+%26+Full+Stack+Engineer;Creator+of+CartPilot+AI+%26+MedQueue+AI;VIT+Bhopal+(CGPA%3A+8.63)" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -46,10 +46,10 @@ Engineered with dark onyx glassmorphism aesthetics, warm gold accents (`#ffdb70`
 - **vCard Profile Sidebar**: Fixed left sidebar carrying profile headshot photo, role badge (*AI & Full Stack Engineer*), system status HUD chip, 1-click copyable email (`samaranand9798@gmail.com`) and phone (`+91-9798169650`), education details, platform badges, and an animated **futuristic buffer download resume button**.
 - **Futuristic Top Header Navbar**: Sleek glass tabs with active energy buffer indicator switching seamlessly between **About**, **Resume**, **Projects**, **Certifications**, and **Contact**.
 - **Interactive Telemetry Sandbox**: Live interactive terminal simulation running system diagnostics for MedQueue AI clinical intake and VibeCode WebContainers execution.
-- **What I'm Doing (Service Grid)**: 4 core focus areas: *Clinical Triage & Real-Time AI*, *Browser AI WebIDEs*, *Voice-Driven NLP Platforms*, and *Agentic Workflows & Microservices*.
+- **What I'm Doing (Service Grid)**: 4 core focus areas: *Autonomous Multi-Agent Workflows (CartPilot AI)*, *Clinical Triage & Real-Time AI (MedQueue AI)*, *Browser AI WebIDEs (VibeCode)*, and *Voice-Driven NLP Platforms (Nexus Cart)*.
 - **Proof of Work & CP Highlights**: Dedicated cards for **LeetCode** (`Sam9798`), **Codeforces** (`Samar__009`), **AlgoUniversity Hall of Fame** (selected from 60,000+ applicants), and **VIT Bhopal CGPA**.
 - **Career & Education Timeline**: Interactive vertical timelines for **Ethnus** (MERN Stack Intern) and **ServiceNow** (Virtual Internship Program), alongside technical skills progress matrix.
-- **Filterable Projects Showcase**: Category tabs (*All*, *Real-Time & Clinical AI*, *AI & WebContainers*, *Voice & NLP*, *Full Stack & Microservices*) with project cards and architectural detail modals.
+- **Filterable Projects Showcase**: Category tabs (*All*, *Multi-Agent & Autonomous AI*, *Real-Time & Clinical AI*, *AI & WebContainers*, *Voice & NLP*, *Full Stack & Microservices*) with project cards and architectural detail modals.
 - **Certifications & Leadership**: Verified credentials gallery for GSSoC Open Source Contributor, AlgoUniversity Hall of Fame, Microsoft Azure DP-900, Ethnus MERN, and Michigan ML.
 
 ---
@@ -68,23 +68,27 @@ Engineered with dark onyx glassmorphism aesthetics, warm gold accents (`#ffdb70`
 
 ## 💻 Featured Projects
 
-### 1. 🏥 [MedQueue AI — Real-Time Triage & Priority Queue Platform](https://github.com/Samar-111/MedQueue-AI)
+### 1. 🛒 [CartPilot AI — Autonomous Multi-Agent E-Commerce Grocery Workforce](https://github.com/Samar-111/CartPilot-AI)
+- **Tech Stack**: LangGraph.js, Next.js 14, Node.js, Express, TypeScript, MongoDB, Server-Sent Events (SSE), Zod, Gemini API.
+- **Key Architecture**: 5-layer autonomous agent workforce coordinating shopping planning, product research, recommendations, cart building, and deterministic budget verification with automated replanning loops, human-in-the-loop checkpoints, and real-time SSE streaming.
+
+### 2. 🏥 [MedQueue AI — Real-Time Triage & Priority Queue Platform](https://github.com/Samar-111/MedQueue-AI)
 - **Tech Stack**: React 18, Node.js, Express, Socket.io, Gemini API, Zod, MongoDB, WebSockets.
 - **Key Architecture**: Automates clinical intake and triage queueing with Gemini-powered ESI 1–5 classification, Zod schema parsing, zero-downtime rule fallback, and ACID transaction locks allowing high-risk emergency patients to jump queue ranks in real time across concurrent dashboards.
 
-### 2. 🚀 [VibeCode — AI-Powered Web IDE](https://github.com/Samar-111/VibeCode)
+### 3. 🚀 [VibeCode — AI-Powered Web IDE](https://github.com/Samar-111/VibeCode)
 - **Tech Stack**: Next.js 15, TypeScript, WebContainers, Monaco Editor, Gemini API, Ollama, Prisma, MongoDB.
 - **Key Architecture**: Browser-based sandbox code compilation & execution across 6+ frameworks (React, Next.js, Express, Hono, Vue, Angular) with a 45% reduction in code completion latency via dual-mode Gemini and local Ollama fallback.
 
-### 3. 🎙️ [Nexus Cart — Voice-Powered Shopping Assistant](https://github.com/Samar-111/voice-shopping-assistant)
+### 4. 🎙️ [Nexus Cart — Voice-Powered Shopping Assistant](https://github.com/Samar-111/voice-shopping-assistant)
 - **Tech Stack**: React, Node.js, Express, MongoDB, Gemini API, Web Speech API, NLP.
 - **Key Architecture**: Low-latency (<250ms) speech-to-text conversion with 94% NLP command parsing accuracy, MongoDB Atlas upsert query optimizations (30% overhead cut), and automated inventory restock scheduling.
 
-### 4. 💼 [Full Stack Job Portal](https://github.com/Samar-111/job-portal)
+### 5. 💼 [Full Stack Job Portal](https://github.com/Samar-111/job-portal)
 - **Tech Stack**: React, Node.js, Express, MongoDB, Remotive API, JWT, bcrypt.
 - **Key Architecture**: Dynamically indexes 1,000+ live remote job listings with debounced search reducing API fetch calls by 40%.
 
-### 5. 🤖 [Hyperion AI — Database Insights Engine](https://github.com/Samar-111/AI-database-assistant)
+### 6. 🤖 [Hyperion AI — Database Insights Engine](https://github.com/Samar-111/AI-database-assistant)
 - **Tech Stack**: React, Python, FastAPI, SQLite, OpenAI API / LLMs.
 - **Key Architecture**: Natural language to optimized SQL query generator with instant interactive data table results and schema validation.
 

@@ -11,7 +11,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Samar Anand | Personal Portfolio",
   description:
-    "Personal Portfolio of Samar Anand — B.Tech Computer Science (AI & ML) student at VIT Bhopal University. Engineer of VibeCode AI IDE, Nexus Cart Voice Assistant, and Full Stack Portals.",
+    "Personal Portfolio of Samar Anand — B.Tech Computer Science (AI & ML) student at VIT Bhopal University. Engineer of CartPilot AI Multi-Agent System, MedQueue AI, VibeCode AI IDE, and Nexus Cart.",
 };
 
 export default function RootLayout({

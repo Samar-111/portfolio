@@ -8,7 +8,12 @@ interface Project {
   id: string;
   title: string;
   subtitle: string;
-  category: 'AI & WebContainers' | 'Real-Time & Clinical AI' | 'Voice & NLP' | 'Full Stack & Microservices';
+  category:
+    | 'Multi-Agent & Autonomous AI'
+    | 'AI & WebContainers'
+    | 'Real-Time & Clinical AI'
+    | 'Voice & NLP'
+    | 'Full Stack & Microservices';
   description: string;
   fullDetails: string[];
   tech: string[];
@@ -17,6 +22,38 @@ interface Project {
 }
 
 const projectsData: Project[] = [
+  {
+    id: 'cartpilot-ai',
+    title: 'CartPilot AI',
+    subtitle: 'Autonomous Multi-Agent Grocery Workforce & Budget Engine',
+    category: 'Multi-Agent & Autonomous AI',
+    description:
+      'Architected an autonomous 5-layer multi-agent grocery system using LangGraph.js, Next.js 14, Node.js, and Express to coordinate shopping planning, inventory research, product ranking, and cart management under strict budget constraints.',
+    fullDetails: [
+      'Engineered a 5-agent LangGraph.js StateGraph workflow (Shopping Planner, Product Research, Recommendation, Cart Manager, and Budget & Policy Validator) with conditional branching, automated replanning loops (up to 3 retries), and human-in-the-loop checkpoints.',
+      'Constructed a deterministic TypeScript verification layer ensuring cart totals strictly honor financial limits (tracked accurately in integer paise) with zero hallucination risk.',
+      'Delivered live Server-Sent Events (SSE) streaming agent execution timelines, tool calls, and state progression to the Next.js 14 frontend with zero-latency visual feedback.',
+      'Designed a modular monorepo architecture with typed Zod validation contracts across Express REST APIs, Mongoose session stores, and Gemini API inference with resilient local fallbacks.',
+    ],
+    tech: [
+      'LangGraph.js',
+      'Multi-Agent Systems',
+      'Next.js 14',
+      'TypeScript',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Server-Sent Events (SSE)',
+      'Zod',
+      'Gemini API',
+    ],
+    githubUrl: 'https://github.com/Samar-111/CartPilot-AI',
+    metrics: [
+      { label: 'Workforce', value: '5 Agents' },
+      { label: 'Orchestrator', value: 'LangGraph' },
+      { label: 'Streaming', value: 'Live SSE' },
+    ],
+  },
   {
     id: 'medqueue-ai',
     title: 'MedQueue AI',
@@ -159,6 +196,7 @@ const projectsData: Project[] = [
 
 const categories = [
   'All',
+  'Multi-Agent & Autonomous AI',
   'Real-Time & Clinical AI',
   'AI & WebContainers',
   'Voice & NLP',
